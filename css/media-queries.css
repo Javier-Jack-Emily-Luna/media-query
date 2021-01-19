@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-body, html {
+*body, html {
     background-color: var(--main-bg);
     height: 100%;
     width: 100%;
@@ -19,17 +19,53 @@ body, html {
     padding: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+.container {
+    width: 100vw;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: blueviolet;
+    color: wheat;
+    box-shadow: 0 5px 5px lightseagreen;
+}
+
 
 /* Small devices (phones and pocket devices, 576 and up) */
-@media screen and (min-width:576px) {
-    selector {
-        background-color: brown;
+@media screen and (max-width: 375px) {
+    nav {
+        flex-direction: column;
+    }
+    nav>ul {
+        flex-direction: row;
+        margin-bottom: 0;
+
+    }
+    nav li {
+        margin-left: 15px;
+    }
+    nav a {
+        font-size: 2em;
+    }
+    nav>ul{
+        flex-direction: column;
+        margin-bottom: 25px;
+    }
+    h1 {
+        text-align: center;
     }
 }
 
+
+
+
+
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width:992px) {
-    selector {
-        background-color: aqua;
+    nav {
+        background-color: coral;
     }
 }
